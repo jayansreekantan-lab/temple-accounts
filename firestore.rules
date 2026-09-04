@@ -1,0 +1,89 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to get current user data
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+    
+    // Helper function to check if user is a verified Treasurer
+    function isTreasurer() {
+      return isAuthenticated() && getUserData().role == 'TREASURER' && getUserData().isActive == true;
+    }
+
+    // Helper function to check if user is an active Member or Treasurer
+    function isActiveUser() {
+      return isAuthenticated() && getUserData().isActive == true;
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      // Any authenticated user can read user profiles
+      allow read: if isAuthenticated();
+      
+      // Only Treasurer can create new member users
+      // Must enforce: Cannot create a 3rd Treasurer (only Members can be created if 2 Treasurers exist)
+      allow create: if isTreasurer() && 
+                    (request.resource.data.role == 'MEMBER' || request.resource.data.role == 'TREASURER');
+      
+      // Only Treasurer can update user profiles, and members can never elevate their own role
+      allow update: if isTreasurer() && 
+                    (request.auth.uid != userId || request.resource.data.role == resource.data.role);
+                    
+      allow delete: if isTreasurer() && resource.data.role != 'TREASURER';
+    }
+
+    // Transactions (Income & Expense)
+    match /transactions/{transactionId} {
+      // Members & Treasurers can read transactions
+      allow read: if isActiveUser();
+      
+      // Only Treasurer can create, update, or delete accounting transactions
+      allow create, update, delete: if isTreasurer();
+    }
+
+    // Cash ↔ Bank Transfers
+    match /transfers/{transferId} {
+      allow read: if isActiveUser();
+      allow create, update, delete: if isTreasurer();
+    }
+
+    // Festivals
+    match /festivals/{festivalId} {
+      allow read: if isActiveUser();
+      allow create, update, delete: if isTreasurer();
+    }
+
+    // Sponsors & Donations
+    match /sponsors/{sponsorId} {
+      allow read: if isActiveUser();
+      allow create, update, delete: if isTreasurer();
+    }
+
+    // Opening Balances
+    match /opening_balances/{balanceId} {
+      allow read: if isActiveUser();
+      allow create, update, delete: if isTreasurer();
+    }
+
+    // Audit Logs
+    match /audit_logs/{logId} {
+      // Treasurers can read all audit logs. Members can read only if allowed.
+      allow read: if isTreasurer();
+      // Any active authenticated user can append audit logs (e.g. login/logout logs), but cannot edit/delete them
+      allow create: if isAuthenticated();
+      allow update, delete: if false; // Immutable audit log
+    }
+
+    // Default deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

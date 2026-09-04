@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Chirayil Temple Accounts</string>
+    <string name="temple_name_ml">ചിറയിൽ ശ്രീ മാടൻനട ക്ഷേത്രം</string>
+    <string name="temple_location_ml">തോട്ടയ്ക്കാട്</string>
+    <string name="app_tagline">Accounts Management</string>
+    <string name="nav_dashboard">ഡാഷ്‌ബോർഡ്</string>
+    <string name="nav_income">വരുമാനം (Income)</string>
+    <string name="nav_expense">ചെലവ് (Expense)</string>
+    <string name="nav_cash_book">കാഷ് ബുക്ക് (Cash Book)</string>
+    <string name="nav_bank_book">ബാങ്ക് ബുക്ക് (Bank Book)</string>
+    <string name="nav_transfers">ട്രാൻസ്ഫർ (Transfers)</string>
+    <string name="nav_festivals">ഉത്സവങ്ങൾ (Festivals)</string>
+    <string name="nav_sponsors">സംഭാവന / സ്പോൺസർ (Donations)</string>
+    <string name="nav_reports">റിപ്പോർട്ടുകൾ (Reports)</string>
+    <string name="nav_users">ഉപയോക്താക്കൾ (Users)</string>
+    <string name="nav_backup">ബാക്കപ്പ് / റീസ്റ്റോർ</string>
+    <string name="nav_audit">ഓഡിറ്റ് ലോഗ് (Audit)</string>
+    <string name="nav_settings">ക്രമീകരണങ്ങൾ (Settings)</string>
+</resources>

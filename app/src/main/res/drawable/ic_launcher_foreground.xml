@@ -1,0 +1,76 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer Arch (Prabhavali) Gold Carvings -->
+    <path
+        android:pathData="M32,74 C30,55 36,36 54,34 C72,36 78,55 76,74"
+        android:strokeWidth="4"
+        android:strokeColor="#FFD700"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    
+    <!-- Ornate Arch Base & Pillars -->
+    <path
+        android:pathData="M29,72 L36,72 L36,78 L29,78 Z M72,72 L79,72 L79,78 L72,78 Z"
+        android:fillColor="#DAA520" />
+    
+    <!-- Holy Flame / Kalasam Peak at Top of Crown -->
+    <path
+        android:pathData="M54,23 C52,27 50,30 54,34 C58,30 56,27 54,23 Z"
+        android:fillColor="#FFA500" />
+    <path
+        android:pathData="M54,26 C53,28 52,30 54,32 C56,30 55,28 54,26 Z"
+        android:fillColor="#FFE87C" />
+
+    <!-- Golden Deity Kireedam (Crown) -->
+    <path
+        android:pathData="M48,46 L60,46 L57,34 L51,34 Z"
+        android:fillColor="#FFD700" />
+    <path
+        android:pathData="M46,52 L62,52 L60,46 L48,46 Z"
+        android:fillColor="#ECC440" />
+
+    <!-- Sacred Golden Face of Madannada Swamy -->
+    <path
+        android:pathData="M47,52 C47,62 61,62 61,52 Z"
+        android:fillColor="#F6C344" />
+    
+    <!-- Eye & Tilak Details -->
+    <path
+        android:pathData="M50,55 L53,55 M55,55 L58,55"
+        android:strokeWidth="1.2"
+        android:strokeColor="#7E2D00"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M54,52 L54,55"
+        android:strokeWidth="1.5"
+        android:strokeColor="#C4151C"
+        android:strokeLineCap="round" />
+
+    <!-- Fresh Garland (Mala) - Crimson Rose & Green Leaves Garland Arch -->
+    <path
+        android:pathData="M40,50 C40,68 47,75 54,75 C61,75 68,68 68,50"
+        android:strokeWidth="3.2"
+        android:strokeColor="#C61B23"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M37,52 C37,72 46,78 54,78 C62,78 71,72 71,52"
+        android:strokeWidth="2.2"
+        android:strokeColor="#2E7D32"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Pedestal Base (Peedam) -->
+    <path
+        android:pathData="M33,78 L75,78 L71,83 L37,83 Z"
+        android:fillColor="#E5A623" />
+    <path
+        android:pathData="M30,83 L78,83 L76,86 L32,86 Z"
+        android:fillColor="#A97116" />
+</vector>
+

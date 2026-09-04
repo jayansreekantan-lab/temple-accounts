@@ -1,0 +1,89 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer halo circle -->
+    <path
+        android:pathData="M54,54m-50,0a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFD700"
+        android:fillColor="#3A080E" />
+
+    <!-- Radiant rays ring -->
+    <path
+        android:pathData="M54,54m-44,0a44,44 0 1,1 88,0a44,44 0 1,1 -88,0"
+        android:strokeWidth="1.2"
+        android:strokeColor="#FFA000"
+        android:fillColor="#520D15" />
+
+    <!-- Prabhavali wooden/golden carved arch -->
+    <path
+        android:pathData="M28,76 C26,52 34,32 54,30 C74,32 82,52 80,76"
+        android:strokeWidth="5"
+        android:strokeColor="#FFB300"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M32,76 C30,55 36,36 54,34 C72,36 78,55 76,74"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFD700"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    
+    <!-- Holy Flame / Kalasam Peak at Top of Crown -->
+    <path
+        android:pathData="M54,20 C51,25 49,28 54,32 C59,28 57,25 54,20 Z"
+        android:fillColor="#FF5722" />
+    <path
+        android:pathData="M54,24 C52,27 51,29 54,31 C57,29 56,27 54,24 Z"
+        android:fillColor="#FFEB3B" />
+
+    <!-- Golden Deity Kireedam (Crown) -->
+    <path
+        android:pathData="M47,44 L61,44 L58,32 L50,32 Z"
+        android:fillColor="#FFD700" />
+    <path
+        android:pathData="M45,50 L63,50 L61,44 L47,44 Z"
+        android:fillColor="#ECC440" />
+
+    <!-- Sacred Golden Face of Madannada Swamy -->
+    <path
+        android:pathData="M46,50 C46,62 62,62 62,50 Z"
+        android:fillColor="#F6C344" />
+    
+    <!-- Eyes & Tilak -->
+    <path
+        android:pathData="M49,54 L53,54 M55,54 L59,54"
+        android:strokeWidth="1.5"
+        android:strokeColor="#5D1E04"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M54,50 L54,54"
+        android:strokeWidth="2"
+        android:strokeColor="#D32F2F"
+        android:strokeLineCap="round" />
+
+    <!-- Fresh Garland (Mala) - Crimson Rose & Green Leaf Garland -->
+    <path
+        android:pathData="M39,48 C39,68 47,76 54,76 C61,76 69,68 69,48"
+        android:strokeWidth="4"
+        android:strokeColor="#D32F2F"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M36,50 C36,72 45,80 54,80 C63,80 72,72 72,50"
+        android:strokeWidth="2.5"
+        android:strokeColor="#2E7D32"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Base Peedam -->
+    <path
+        android:pathData="M30,80 L78,80 L74,86 L34,86 Z"
+        android:fillColor="#FFB300" />
+    <path
+        android:pathData="M26,86 L82,86 L80,90 L28,90 Z"
+        android:fillColor="#D89200" />
+</vector>

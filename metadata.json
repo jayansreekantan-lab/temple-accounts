@@ -1,0 +1,6 @@
+{
+  "name": "Chirayil Temple Accounts",
+  "description": "Accounts Management System for Chirayil Sree Madannada Temple, Thottakkad with offline-first support, role-based access, and reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
